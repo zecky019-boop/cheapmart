@@ -1,0 +1,824 @@
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   (Extracted from ALL Week 7 files)
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 25px;
+}
+
+/* ============================================
+   WRAPPER (for catalog page)
+   ============================================ */
+.wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 25px;
+}
+
+/* ============================================
+   NAVIGATION - EXACT SAME AS WEEK 7
+   ============================================ */
+.navbar {
+    background-color: #222222;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #dddddd;
+}
+
+/* ============================================
+   HEADINGS - EXACT SAME AS WEEK 7
+   ============================================ */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   MESSAGES - EXACT SAME AS WEEK 7
+   ============================================ */
+.error-message {
+    color: #cc0000;
+    background-color: #f8d7da;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+    width: 100%;
+    max-width: 500px;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    max-width: 500px;
+}
+
+.success-message a {
+    color: #ffa500;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    background: #f8d7da;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    color: #155724;
+    background: #d4edda;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+}
+
+/* ============================================
+   FORMS - EXACT SAME AS WEEK 7
+   ============================================ */
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    max-width: 320px;
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ffa500;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ============================================
+   BUTTONS - EXACT SAME AS WEEK 7
+   ============================================ */
+button, .btn {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+button:hover, .btn:hover {
+    background-color: #e69500;
+}
+
+.btn-register {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #e69500;
+}
+
+.btn-login {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #e69500;
+}
+
+.btn-add {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #e69500;
+}
+
+.btn-submit {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 5px;
+}
+
+.btn-submit:hover {
+    background-color: #e69500;
+}
+
+/* ============================================
+   FOOTER LINKS - EXACT SAME AS WEEK 7
+   ============================================ */
+.footer-link {
+    font-size: 15px;
+    color: #000000;
+}
+
+.footer-link a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.footer-link a:hover {
+    color: #0000aa;
+}
+
+.forgot-link {
+    margin: 10px 0 15px 0;
+}
+
+.forgot-link a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.forgot-link a:hover {
+    color: #0000aa;
+}
+
+/* ============================================
+   PREVIEW & PASSWORD STRENGTH
+   ============================================ */
+.preview {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.password-strength {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ============================================
+   DASHBOARD - EXACT SAME AS WEEK 7
+   ============================================ */
+.role-text {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.welcome-desc {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.privilege-container {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin-tag {
+    color: #008000;
+}
+
+.inline-link {
+    color: #800080;
+    text-decoration: underline;
+}
+
+.inline-link:hover {
+    color: #550055;
+}
+
+/* ============================================
+   PRODUCT CATALOG - EXACT SAME AS WEEK 7
+   ============================================ */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.product-stock {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.btn-add-catalog {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-add-catalog:hover {
+    background-color: #e69500;
+}
+
+.btn-add-outline {
+    background-color: #333333;
+}
+
+.btn-add-outline:hover {
+    background-color: #555555;
+}
+
+.no-products {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+    font-size: 18px;
+}
+
+/* ============================================
+   PRODUCT ITEM (LIST VIEW) - EXACT SAME AS WEEK 7
+   ============================================ */
+.product-item {
+    background: white;
+    padding: 20px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-item strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.product-item .btn-add {
+    margin-top: 8px;
+}
+
+/* ============================================
+   ADMIN TABLE - EXACT SAME AS WEEK 7
+   ============================================ */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 15px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.product-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #000000;
+}
+
+.product-table td {
+    color: #333333;
+}
+
+.action-links a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.action-links a:hover {
+    color: #0000aa;
+}
+
+.divider {
+    color: #333333;
+    margin: 0 4px;
+}
+
+.empty-row td {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+    font-style: italic;
+}
+
+/* ============================================
+   PROFILE PAGE - EXACT SAME AS WEEK 7
+   ============================================ */
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    max-width: 400px;
+}
+
+/* ============================================
+   HERO / FEATURES - EXACT SAME AS WEEK 7 (Index page)
+   ============================================ */
+.hero {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.hero .tagline {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.hero .description {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.greeting {
+    font-size: 18px;
+    color: #333333;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #ffa500;
+    width: 100%;
+    max-width: 500px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.feature-box {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.feature-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* ============================================
+   RESPONSIVE: TABLETS (768px and up)
+   ============================================ */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .wrapper {
+        padding: 15px;
+    }
+
+    /* Stack navigation vertically */
+    .navbar ul {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-group {
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea {
+        max-width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-card {
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .product-table {
+        font-size: 13px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 10px 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .privilege-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .error-message,
+    .success-message {
+        font-size: 13px;
+        padding: 8px 12px;
+        max-width: 100%;
+    }
+
+    button, .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-add {
+        width: auto;
+        text-align: center;
+    }
+
+    .btn-add-catalog {
+        width: 100%;
+        text-align: center;
+    }
+
+    .greeting {
+        max-width: 100%;
+    }
+
+    .profile-info p {
+        max-width: 100%;
+    }
+
+    .forgot-link {
+        text-align: center;
+    }
+
+    .footer-link {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .wrapper {
+        padding: 10px;
+    }
+
+    .navbar ul {
+        gap: 4px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .product-table {
+        font-size: 11px;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 6px 8px;
+    }
+
+    .product-title {
+        font-size: 15px;
+    }
+
+    .product-desc {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    .product-stock {
+        font-size: 12px;
+    }
+
+    .btn-add-catalog {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero .tagline {
+        font-size: 16px;
+    }
+
+    .feature-box {
+        padding: 15px;
+    }
+
+    .feature-box h3 {
+        font-size: 15px;
+    }
+
+    .feature-box p {
+        font-size: 12px;
+    }
+
+    button, .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
